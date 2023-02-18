@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include('header.php'); ?>
+<?php
+session_start();
+include('header.php'); ?>
+<?php include('../conf/config.php'); ?>
 
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
@@ -23,7 +26,16 @@
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
-    <?php include('content-header.php'); ?>
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <?php include('content-header.php'); ?>
+      <!-- /.content-header -->
+
+      <!-- Main content dashboard-->
+      <?php include('data_m_po.php'); ?>
+
+      <!-- /.content -->
+    </div>
     <!-- /.content-wrapper -->
     <?php include('footer.php'); ?>
 
